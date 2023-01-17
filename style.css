@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    max-width: 90rem;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+:root {
+
+    --primary-red: hsl(1, 90%, 64%);
+    --primary-blue: hsl(219, 85%, 26%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-very_light_grayish_blue: hsl(210, 60%, 98%);
+    --neutral-light_grayish_blue_1: hsl(211, 68%, 94%);
+    --neutral-light_grayish_blue_2: hsl(205, 33%, 90%);
+    --neutral-grayish_blue: hsl(219, 14%, 63%);
+    --neutral-dark_grayish_blue: hsl(219, 12%, 42%);
+    --neutral---very_dark_blue: hsl(224, 21%, 14%);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    padding: 1rem;
+    background-color: var(--neutral-very_light_grayish_blue);
+}
+
+main {
+    background-color: var(--neutral-white);
+    max-width: 46rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.head_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.head_section a {
+    color: var(--neutral-dark_grayish_blue);
+}
+
+.head_section a:hover {
+    color: var(--primary-blue);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h1 span {
+    font-size: 1.2rem;
+    background-color: var(--primary-blue);
+    color: var(--neutral-white);
+    padding: 0.2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    line-height: 1.8;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.messages_container {
+    margin-top: 2rem;
+}
+
+.single_message {
+    background-color: var(--neutral-very_light_grayish_blue);
+    padding: 1rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.single_message a {
+    font-weight: 800;
+    color: var(--neutral-very_dark_blue);
+}
+
+.single_message a:hover {
+    color: var(--primary-blue);
+}
+
+.message_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.message_user_image {
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+.message_subject span {
+    color: var(--primary-red);
+}
+
+.message_subject .visited {
+    color: var(--neutral-dark_grayish_blue);
+}
+
+.message_time {
+    color: var(--neutral-dark_grayish_blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 60rem) {}
