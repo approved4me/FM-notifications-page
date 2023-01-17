@@ -38,7 +38,6 @@ select {
 }
 
 :root {
-
     --primary-red: hsl(1, 90%, 64%);
     --primary-blue: hsl(219, 85%, 26%);
     --neutral-white: hsl(0, 0%, 100%);
@@ -53,7 +52,6 @@ select {
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
-    padding: 1rem;
     background-color: var(--neutral-very_light_grayish_blue);
 }
 
@@ -61,10 +59,7 @@ main {
     background-color: var(--neutral-white);
     max-width: 46rem;
     margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 a {
@@ -107,12 +102,16 @@ h1 span {
 }
 
 .single_message {
-    background-color: var(--neutral-very_light_grayish_blue);
     padding: 1rem;
     display: flex;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
     border-radius: 0.5rem;
 }
+
+.new {
+    background-color: var(--neutral-very_light_grayish_blue);
+}
+
 
 .single_message a {
     font-weight: 800;
@@ -129,7 +128,8 @@ h1 span {
 }
 
 .message_user_image {
-    width: 3rem;
+    min-width: 3rem;
+    max-width: 3rem;
     margin-right: 1rem;
 }
 
@@ -141,8 +141,32 @@ h1 span {
     color: var(--neutral-dark_grayish_blue);
 }
 
+.message_subject .unread {
+    color: var(--primary-blue);
+}
+
 .message_time {
-    color: var(--neutral-dark_grayish_blue);
+    color: var(--neutral-grayish_blue);
+}
+
+.message {
+    padding: 1rem;
+    outline: 1px solid var(--neutral-light_grayish_blue_2);
+    border-radius: 0.5rem;
+    margin-left: 5rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.message:hover {
+    background-color: var(--neutral-very_light_grayish_blue);
+    outline: none;
+}
+
+.picture {
+    margin-left: auto;
+    min-width: 3rem;
+    max-width: 3rem;
 }
 
 .attribution {
@@ -152,9 +176,22 @@ h1 span {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+
 }
 
 
 /* MEDIA QUERY */
 
-@media only screen and (min-width: 60rem) {}
+@media only screen and (min-width: 60rem) {
+
+    body {
+        padding: 1rem;
+    }
+
+    main {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        padding: 2rem 2rem 0 2rem;
+    }
+}
