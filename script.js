@@ -19,18 +19,10 @@ readAll.onclick = () => {
 }
 
 
-for (var i = 0; i < newMessages.length; i++) {
-    newMessages[i].onclick = function () {
-        this.classList.remove("new");
-
-        // newDott.forEach.remove;
-
-        newDott.forEach(function (e) {
-            e.remove();
-        })
-
+for (let i = 0; i < newMessages.length; i++) {
+    newMessages[i].addEventListener('click', function () {
+        messages[i].classList.remove('new');
+        newDott[i].style.display = 'none';
         notifications.innerText = newMessages.length;
-    }
-
+    })
 }
-
