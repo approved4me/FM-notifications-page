@@ -20,9 +20,18 @@ readAll.onclick = () => {
 
 
 for (let i = 0; i < newMessages.length; i++) {
-    newMessages[i].addEventListener('click', function () {
+    newMessages[i].onclick = function () {
         messages[i].classList.remove('new');
-        newDott[i].style.display = 'none';
+        newDott[i].remove();
         notifications.innerText = newMessages.length;
-    })
+    }
 }
+
+// another possibility. Just style to none. With eventListener
+// for (let i = 0; i < newMessages.length; i++) {
+//     newMessages[i].addEventListener('click', function () {
+//         messages[i].classList.remove('new');
+//         newDott[i].style.display = 'none';
+//         notifications.innerText = newMessages.length;
+//     })
+// }
